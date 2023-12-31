@@ -1,0 +1,38 @@
+﻿@model SaderatAPI.AdviceResp
+
+<div class="card">
+    <div class="card-header">
+        <p class="text-center">نتیجه تایید تراکنش</p>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-6">
+                Status
+            </div>
+            <div class="col-6">
+                @Model.Status.ToString()
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                ReturnId
+            </div>
+            <div class="col-6">
+                @Model.ReturnId.ToString()
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                Message
+            </div>
+            <div class="col-6">
+                @Model.Message.ToString()
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <p>Power By LightCompany</p>
+    </div>
+</div>

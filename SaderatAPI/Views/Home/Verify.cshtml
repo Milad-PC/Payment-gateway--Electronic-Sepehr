@@ -1,0 +1,151 @@
+﻿@model SaderatAPI.PayResponse
+
+<div class="card">
+    <div class="card-header">
+        <p class="text-center">تعیین وضعیت تراکنش</p>
+    </div>
+    <div class="card-body">
+        <div class="row">
+            <div class="col-6">
+                terminalid
+            </div>
+            <div class="col-6">
+                @Model.terminalid.ToString()
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                respcode
+            </div>
+            <div class="col-6">
+                @Model.respcode.ToString()
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                respmsg
+            </div>
+            <div class="col-6">
+                @Model.respmsg.ToString()
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                amount
+            </div>
+            <div class="col-6">
+                @Model.amount.ToString()
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                invoiceid
+            </div>
+            <div class="col-6">
+                @Model.invoiceid.ToString()
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                terminalid
+            </div>
+            <div class="col-6">
+                @Model.terminalid.ToString()
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                payload
+            </div>
+            <div class="col-6">
+                @Model.payload.ToString()
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                tracenumber
+            </div>
+            <div class="col-6">
+                @Model.tracenumber.ToString()
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                rrn
+            </div>
+            <div class="col-6">
+                @Model.rrn.ToString()
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                datepaid
+            </div>
+            <div class="col-6">
+                @Model.datepaid.ToString()
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                digitalreceipt
+            </div>
+            <div class="col-6">
+                @Model.digitalreceipt.ToString()
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                issuerbank
+            </div>
+            <div class="col-6">
+                @Model.issuerbank.ToString()
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-6">
+                cardnumber
+            </div>
+            <div class="col-6">
+                @Model.cardnumber.ToString()
+            </div>
+        </div>
+
+        <br /><br />
+
+        <div class="row">
+            <div class="col-6">
+                <form action="@Url.Action("Advice")" method="post">
+                    <label for="digitalreceipt">رسید دیجیتال</label>
+                    <input type="text" name="digitalreceipt" value="@Model.digitalreceipt" />
+                    <label for="Tid">ترمینال</label>
+                    <input type="text" name="Tid" value="@Model.terminalid" />
+                    <input type="submit" value="تایید تراکنش" />
+                </form>
+            </div>
+            <div class="col-6">
+                <form action="@Url.Action("RollBack")" method="post">
+                    <label for="digitalreceipt">رسید دیجیتال</label>
+                    <input type="text" name="digitalreceipt" value="@Model.digitalreceipt" />
+                    <label for="Tid">ترمینال</label>
+                    <input type="text" name="Tid" value="@Model.terminalid" />
+                    <input type="submit" value="برگشت تراکنش" />
+                </form>
+            </div>
+        </div>
+    </div>
+    <div class="card-footer">
+        <p>Power By LightCompany</p>
+    </div>
+</div>
